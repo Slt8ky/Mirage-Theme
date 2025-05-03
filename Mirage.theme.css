@@ -11,7 +11,8 @@
     --brightness: 40%;
     --background: url("");
     --loadinglogo: url(logo.png);
-    --color: rgb(230, 147, 255); 
+    --color: rgb(230, 147, 255);
+    --loadingtime: 6s;
 }
 
 * {
@@ -229,13 +230,6 @@ div[class*=guildNameText] {
     overflow-y: scroll;
 }
 
-.wrapper_ef3116, .sidebarList_c48ade, .biteSize_c0bea0, .wrapper_cb9592, .tabBody__133bf, .container_c8ffbb, .messagesWrapper__36d07, .form_f75fb0, .panels_c48ade, .upperContainer__9293f {
-    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.652), inset 0 0 0 1px rgb(44, 44, 44) !important;
-    background: linear-gradient(170deg, #e562af21, rgba(21, 26, 46, 0.524)) !important;
-    border-radius: 10px;
-    backdrop-filter: blur(var(--blur)) !important;
-}
-
 .messagesWrapper__36d07  {
     margin: 0px;
 }
@@ -399,74 +393,6 @@ div[class*=menu_c1e9c4] {
     filter: blur(3px);
 }
 
-body::after, body::before {
-    display: block;
-    position: absolute;
-    visibility: hidden;
-    box-shadow: 0 0 10px var(--color);
-    text-shadow: 0 0 5px var(--color);
-}
-
-body::after {
-    --posx: 50%;
-    --posy: 30%;
-    inset: 0;
-    z-index: 150;
-
-
-    background: rgb(16, 16, 16) var(--loadinglogo) var(--posx) var(--posy) no-repeat !important;
-    filter: drop-shadow(0 0 0.75rem crimson);
-    color: rgb(249, 213, 255);
-
-    content: "Loading Theme...";
-    font-size: 18px;
-    text-align: center;
-    line-height: 100vh;
-    letter-spacing: 3px;
-
-    animation: fadeout 2.5s 1s ease-in-out;
-}
-
-body::before {
-    --width: 15em;
-
-    width: 0px;
-    height: 4px;
-    top: 53%;
-    left: calc(50% - (var(--width) / 2));
-    z-index: 160;
-    
-    background: linear-gradient(to right, var(--color), rgb(248 214 174), var(--color)) !important;
-    background-size: 250px !important;
-    background-attachment: fixed !important;
-
-    border-radius: 10px;
-
-    content: "";
-    
-    animation: 
-        loadingbar 2s 1s ease-in-out,
-        fadeout 2s 1s ease-out;
-}
-
-@keyframes loadingbar {
-    to {
-        width: var(--width);
-    }
-}
-
-@keyframes fadeout {
-    0% {
-        visibility: visible;
-    }
-    60% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 .guildSidebar_f75fb0 {
     padding: 10px;
     overflow: hidden;
@@ -523,3 +449,104 @@ body::before {
     opacity: 1;
 }
 
+.scrollerInner__36d07 {
+    animation: fade-in .7s;
+}
+
+.wrapper_ef3116, .sidebarList_c48ade, .biteSize_c0bea0, .wrapper_cb9592, .tabBody__133bf, .container_c8ffbb, .messagesWrapper__36d07, .form_f75fb0, .panels_c48ade, .upperContainer__9293f {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.652), inset 0 0 0 1px rgb(44, 44, 44) !important;
+    background: linear-gradient(170deg, #e562af21, rgba(21, 26, 46, 0.524)) !important;
+    border-radius: 10px;
+    backdrop-filter: blur(var(--blur)) !important;
+}
+
+body::after, body::before {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    box-shadow: 0 0 10px var(--color);
+    text-shadow: 0 0 5px var(--color);
+}
+
+body::after {
+    --posx: 50%;
+    --posy: 30%;
+    inset: 0;
+    z-index: 150;
+
+
+    background: rgb(16, 16, 16) var(--loadinglogo) var(--posx) var(--posy) no-repeat !important;
+    filter: drop-shadow(0 0 0.75rem crimson);
+    color: rgb(249, 213, 255);
+
+    content: "Loading Theme...";
+    font-size: 18px;
+    text-align: center;
+    line-height: 100vh;
+    letter-spacing: 3px;
+
+    animation: fadeout calc(var(--loadingtime)) 1s ease-in-out;
+}
+
+body::before {
+    --width: 15em;
+
+    width: 0px;
+    height: 4px;
+    top: 53%;
+    left: calc(50% - (var(--width) / 2));
+    z-index: 160;
+    
+    opacity: 0;
+    background: linear-gradient(to right, var(--color), rgb(248 214 174), var(--color)) !important;
+    background-size: 250px !important;
+    background-attachment: fixed !important;
+
+    border-radius: 10px;
+
+    content: "";
+    
+    animation: 
+        loadingbar var(--loadingtime) 1s ease-in-out
+        /* fadeout 2s 1s ease-out; */
+}
+
+@keyframes loadingbar {
+    0% {
+        visibility: visible;
+    }
+    50% {
+        opacity: 1;
+        width: var(--width);
+    }
+    60%, 100% {
+        opacity: 0;
+        width: var(--width);
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        visibility: visible;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.base_c48ade {
+    animation: fade-in calc(var(--loadingtime) + 3s) !important;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-2500px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+}
