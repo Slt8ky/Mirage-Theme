@@ -32,10 +32,11 @@ Go to Discord > Settings > theme > enable theme.css
 ## Additonal & Theme Customization:
 ```css
 :root {
+    --title: "Mirage Theme V1";
     --blur: 10px;
     --brightness: 40%;
-    --background: url("");
-    --loadinglogo: url(logo.png);
+    --background: url(https://i.ibb.co/C5xSzQZk/bg.jpg);
+    --loadinglogo: url(https://i.ibb.co/WvMrbWRK/Waifu-PNG-Image.png);
     --color: rgb(230, 147, 255);
     --loadingtime: 6s;
 }
