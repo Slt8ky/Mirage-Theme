@@ -1,4 +1,4 @@
-# Discord-Theme
+# Mirage Theme V1
 A theme that has custom background feature, transparentcy mode are supported.
 
 ![image](https://github.com/user-attachments/assets/1c884d91-246c-460a-9d4f-a8cae1cb506b)
