@@ -1,6 +1,7 @@
 # Mirage Theme V1
 A theme that has custom background feature, transparentcy mode are supported.
 
+![3d11b9f8-7c93-424f-bdbd-829b0f5cd4c0](https://github.com/user-attachments/assets/e63c3d49-6fdc-4dd3-b2be-43fad26ec055)
 ![image](https://github.com/user-attachments/assets/1c884d91-246c-460a-9d4f-a8cae1cb506b)
 ![image](https://github.com/user-attachments/assets/a83bb5d5-389a-404b-830e-fbac0ee8945a)
 
