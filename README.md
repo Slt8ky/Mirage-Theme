@@ -36,7 +36,8 @@ Go to Discord > Settings > theme > enable theme.css
     --brightness: 40%;
     --background: url("");
     --loadinglogo: url(logo.png);
-    --color: rgb(230, 147, 255); 
+    --color: rgb(230, 147, 255);
+    --loadingtime: 6s;
 }
 ```
 
@@ -48,7 +49,7 @@ Go to Discord > Settings > theme > enable theme.css
 > settings > Window preferences > Enable Transparency
 
 > [!NOTE]
-> Restart Discord required
+> Restart Discord required.
 
 ### Download MicaForEveryone (Recommanded)
 > https://github.com/MicaForEveryone/MicaForEveryone/releases/tag/2.0.3.0
@@ -60,4 +61,4 @@ With Mica:
 ![image](https://github.com/user-attachments/assets/dd8e5449-d84b-4481-9c1f-b257434b5092)
 
 > [!NOTE]
-> Restart Discord required
+> Restart Discord required.
