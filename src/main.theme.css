@@ -513,6 +513,25 @@ body::before {
         /* fadeout 2s 1s ease-out; */
 }
 
+.callAvatarMaskContainer_f910d0 {
+    .svg__2338f {
+        filter: brightness(70%);
+        transition: filter .2s !important;
+    }
+    .border_f910d0 {
+        transition: box-shadow .2s !important;
+    }
+
+    &:has(.speaking_f910d0) {
+        .svg__2338f {
+            filter: brightness(100%);
+        }
+        .border_f910d0 {
+            box-shadow: 0 0 1px 1px var(--primary), 0 0 10px var(--primary) !important;
+        }
+    }
+}
+
 @keyframes loadingbar {
     0% {
         visibility: visible;
