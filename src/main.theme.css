@@ -430,12 +430,12 @@ div[class*=menu_c1e9c4] {
     position: absolute;
     left: 0;
     width: 3px;
-    height: 0px;
     opacity: 0;
     transform: translatY(-50%);
     background: rgb(111, 199, 215);
     box-shadow: 0 0 4px rgb(40, 148, 255);
     content: "";
+    border-radius: 15px;
     transition: .2s ease-in-out;
 }
 
