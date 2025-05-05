@@ -433,8 +433,8 @@ div[class*=menu_c1e9c4] {
     height: 0px;
     opacity: 0;
     transform: translatY(-50%);
-    background: rgb(111, 215, 111);
-    box-shadow: 0 0 4px rgb(40, 255, 40);
+    background: rgb(111, 199, 215);
+    box-shadow: 0 0 4px rgb(40, 148, 255);
     content: "";
     transition: .2s ease-in-out;
 }
