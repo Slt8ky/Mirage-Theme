@@ -5,15 +5,4 @@
  * @version 0.0.1
  */
 
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://slt8ky.github.io/Mirage-Theme/src/main.theme.css');
-
-:root {
-    --blur: 10px;
-    --brightness: 40%;
-    --background: url(https://i.ibb.co/C5xSzQZk/bg.jpg); 
-    --loadinglogo: url(https://i.ibb.co/WvMrbWRK/Waifu-PNG-Image.png);
-    --color: rgb(230, 147, 255);
-    --loadingtime: 6s;
-    --primary: rgb(85, 190, 255);
-}
+@import url('https://slt8ky.github.io/Mirage-Theme/src/import.css');
